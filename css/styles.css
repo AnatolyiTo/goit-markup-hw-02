@@ -14,12 +14,27 @@
 
 }
 
+/* p, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+ul, ol {
+    margin: 0;
+    padding-left: 0; */
+
 body {
     font-family: "Roboto", sans-serif;
     font-size: 14px;
     letter-spacing: 0.03em;
     background-color: var(--background-color);
 }
+
+/* .container {
+    width: 1200px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+} */
 
 .list {
     list-style: none;
@@ -29,26 +44,25 @@ body {
     text-decoration: none;
 }
 
+.link.current {
+    color: var(--accent-color);
+}
+
 .pointer {
     cursor: pointer;
 }
 
-.header {
-    background-color: var(--background-second-color);
-}
-.header-link {
-    font-weight: 500;
-    line-height: 1.1;
-    letter-spacing: 0.02em;
-    color: var(--second-btn-color)
-}
-
-.header-tel,
-.header-mail {
-    font-weight: 500;
-    line-height: 1.1;
-    letter-spacing: 0.02em;
-    color: var(--about-title-type-color);
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
 }
 
 .logo-top {
@@ -71,7 +85,7 @@ body {
     color: var(--main-btn-color);
 }
 
-.logo-web-color {
+.logo-web {
     font-family: 'Raleway', sans-serif;
     font-style: normal;
     font-weight: 700;
@@ -91,14 +105,48 @@ body {
 .footer-location:focus,
 .footer-mail:hover,
 .footer-mail:focus,
-.footer-tel:hover, 
+.footer-tel:hover,
 .footer-tel:focus {
     color: var(--accent-color);
 }
 
+.hero,
+.gallery,
+.benefits,
+.masters,
+.hero-portfolio {
+    background-color: var(--background-second-color);
+}
+
+/*--------------------------------------HEADER------------------------------------*/
+.header {
+    background-color: var(--background-second-color);
+    padding-top: 32px;
+}
+
+/* .header-list {
+    display: flex;
+} */
+
+.header-link {
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+    color: var(--second-btn-color);
+}
+
+.header-tel,
+.header-mail {
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+    color: var(--about-title-type-color);
+}
+
+/*--------------------------------------HERO------------------------------------*/
 .hero-main-button:hover,
 .hero-main-button:focus {
-    color:var(--second-btn-color);
+    color: var(--second-btn-color);
 }
 
 .hero-second-button:hover,
@@ -107,9 +155,13 @@ body {
     background-color: var(--accent-color);
 }
 
-.hero, .gallery, .benefits, .masters {
-    background-color: var(--background-second-color);
+.hero-portfolio {
+    color: var(--main-btn-color);
 }
+
+/* .hero {
+    color: var(--main-btn-color);
+} */
 
 .hero-title {
     font-weight: 900;
@@ -119,6 +171,7 @@ body {
     letter-spacing: 0.06em;
     text-transform: uppercase;
 }
+
 .hero-main-button {
     text-decoration: none;
     font-family: inherit;
@@ -156,8 +209,10 @@ body {
     color: var(--about-title-type-color);
 }
 
+/*--------------------------------------BENEFITS------------------------------------*/
 .benefits-item-title {
     font-weight: 700;
+    font-size: 14px;
     line-height: 1.1;
     letter-spacing: 0.03em;
     text-transform: uppercase;
@@ -171,6 +226,7 @@ body {
     color: var(--benefits-text);
 }
 
+/*--------------------------------------MASTERS------------------------------------*/
 .gallery-top-title,
 .masters-top-title {
     font-weight: 700;
@@ -191,12 +247,13 @@ body {
 .masters-item-text {
     font-weight: 400;
     font-size: 16px;
-    line-height: 1.18px;
+    line-height: 1.18;
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--masters-item-text);
 }
 
+/*--------------------------------------FOOTER------------------------------------*/
 .footer {
     background-color: var(--background-link-color);
 }
@@ -215,5 +272,5 @@ body {
 .footer-tel {
     line-height: 1.7;
     letter-spacing: 0.03em;
-    color:var(--link-text)
+    color: var(--link-text)
 }
